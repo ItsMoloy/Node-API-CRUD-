@@ -7,12 +7,21 @@ const ProductSchema = new mongoose.Schema({
     },
     price: {
         type: Number,
-        required: [true, 'Please fill the price'],
+        required: true,
+        default: 0,
     },
     quantity: {
         type: Number,
-        required: [true, 'Please fill the quantity'],
+        required: true, ,
+        default: 0,
     },
-},
+}, {
 
-    })
+ timestamps: true
+}
+
+);
+
+const Product = mongoose.model('Product', ProductSChema);
+
+module.exports = Product;

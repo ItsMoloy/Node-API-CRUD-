@@ -8,7 +8,11 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
-mongoose.connect("mongodb+srv://MOLOY-NODE:mongodbSecretKey@node-api.qoofc.mongodb.net/?retryWrites=true&w=majority&appName=NODE-API")
+app.post('/api/products', (req, res) => {
+    res.send('Product created');
+});
+
+mongoose.connect("mongodb+srv://MOLOY-NODE:mongodb2025@node-api.qoofc.mongodb.net/?retryWrites=true&w=majority&appName=NODE-API")
 
 .then(() => {
     console.log('MongoDB connected');
@@ -20,3 +24,4 @@ mongoose.connect("mongodb+srv://MOLOY-NODE:mongodbSecretKey@node-api.qoofc.mongo
 .catch((err) => {
     console.log('MongoDB connection error', err);
 });
+
