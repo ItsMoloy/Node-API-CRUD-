@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const schema = new mongoose.Schema({
+const ProductSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'Please fill the name'],
@@ -13,4 +13,6 @@ const schema = new mongoose.Schema({
         type: Number,
         required: [true, 'Please fill the quantity'],
     },
+},
+
     })

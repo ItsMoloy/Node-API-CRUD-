@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
-mongoose.connect("mongodb+srv://MOLOY-NODE:mongodb2025@node-api.qoofc.mongodb.net/?retryWrites=true&w=majority&appName=NODE-API")
+mongoose.connect("mongodb+srv://MOLOY-NODE:mongodbSecretKey@node-api.qoofc.mongodb.net/?retryWrites=true&w=majority&appName=NODE-API")
 
 .then(() => {
     console.log('MongoDB connected');
